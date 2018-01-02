@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LightStrip } from '../lightStrip';
+
+import { LightControllerService } from '../light-controller.service'
 
 @Component({
   selector: 'app-strip-controller',
@@ -7,15 +9,20 @@ import { LightStrip } from '../lightStrip';
   styleUrls: ['./strip-controller.component.css']
 })
 export class StripControllerComponent implements OnInit {
-  lightStrip: LightStrip;
+  @Input() lightStrip: LightStrip;
 
-  constructor() {
+  constructor(
+    private controllerService : LightControllerService
+  )
+  {
+  }
 
+  updateStrip(): void {
+    this.controllerService.setStripColor(this.lightStrip.key, this.lightStrip.color);
   }
 
   ngOnInit() {
-    // this.lightStrip.name = "Name";
-    // this.lightStrip.color = "#ffffff";
+    
   }
 
 }

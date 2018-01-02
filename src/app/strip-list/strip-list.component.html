@@ -1,5 +1,14 @@
-<div class="containter">
-  <div class="btn-group-vertical" role="group">
-    <button type="button" class="btn btn-secondary">The quick brown fox</button>
+<div>
+  <div class="row">
+    <div class="col-3">
+      <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-secondary" *ngFor="let strip of strips" (click)="onClick(strip)">{{strip.name}}</button>
+      </div>
+    </div>
+    <div class="col-9">
+      <div *ngIf="selectedStrip">
+        <app-strip-controller [lightStrip]="selectedStrip"></app-strip-controller>
+      </div>
+    </div>
   </div>
 </div>
