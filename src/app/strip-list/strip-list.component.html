@@ -1,6 +1,6 @@
 <div>
   <div class="row">
-    <div class="col-3">
+    <div class="col-3" *ngIf="controllerService.token">
       <div class="btn-group-vertical" role="group">
         <button type="button" class="btn btn-secondary" *ngFor="let strip of strips" (click)="onClick(strip)">{{strip.name}}</button>
       </div>

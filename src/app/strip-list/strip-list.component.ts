@@ -20,7 +20,7 @@ export class StripListComponent implements OnInit {
     this.controllerService.getStripsState().subscribe(strips => this.strips = strips);
   }
 
-  onClick(item : Object): void {
+  onClick(item : LightStrip): void {
     this.selectedStrip = item;
   }
 

@@ -1,0 +1,5 @@
+<input type="password" [(ngModel)]=password />
+<button type="button" class="btn btn-primary" (click)="controllerService.getToken(password)">Login</button>
+<p>
+  {{controllerService.status}}
+</p>

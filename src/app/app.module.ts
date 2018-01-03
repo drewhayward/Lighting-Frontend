@@ -9,13 +9,17 @@ import { AppComponent } from './app.component';
 import { StripControllerComponent } from './strip-controller/strip-controller.component';
 import { StripListComponent } from './strip-list/strip-list.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { LoginBarComponent } from './login-bar/login-bar.component';
+import { LightSwitchesComponent } from './light-switches/light-switches.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StripControllerComponent,
-    StripListComponent
+    StripListComponent,
+    LoginBarComponent,
+    LightSwitchesComponent
   ],
   imports: [
     BrowserModule,

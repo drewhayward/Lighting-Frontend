@@ -1,0 +1,8 @@
+<div *ngIf="controllerService.token">
+  <div *ngFor="let light of lights">
+    <p>
+      {{light.name}}
+      <input type="checkbox" [(ngModel)]="light.state" (click)="onToggle(light)"/>
+    </p>
+  </div>
+</div>
